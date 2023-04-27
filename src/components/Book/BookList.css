@@ -1,0 +1,29 @@
+.book-list .book {
+    display: flex;
+    padding: 1em 0;
+}
+
+.book-list .book-image {
+    width: 200px;
+    height: 300px;
+}
+
+.book-list .book-content {
+    padding: 0 1em;
+}
+
+.book-list .book-content > * {
+    padding: 0.5em 0;
+}
+
+.book-list .book-content .name {
+    font-size: 1.5em;
+    color: #eee;
+}
+
+.book-list .book-content .slug {
+    background-color: rgb(129, 125, 85);
+    color: #000;
+    font-weight: 800;
+    padding: .5em 2em;
+}

@@ -1,0 +1,16 @@
+.text-block {
+    display: flex;
+    margin: 1em 0;
+}
+
+.text-block.text-right {
+    flex-direction: row-reverse;
+}
+
+.text-block .text {
+    padding: 0 1em;
+}
+
+.text-block .image img {
+    border-radius: 10%;
+}

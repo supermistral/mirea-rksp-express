@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Some book name",
+        "slug": "some-book-name",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "publication_date": "01/01/2023",
+        "page_amount": 100,
+        "image": "https://picsum.photos/200/300"
+    },
+    {
+        "name": "Some book name 2",
+        "slug": "some-book-name-2",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "publication_date": "02/02/2023",
+        "page_amount": 200,
+        "image": "https://picsum.photos/200/300"
+    }
+]

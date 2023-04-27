@@ -1,0 +1,23 @@
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+}
+
+.logo text:nth-child(1) {
+    animation: cLetterArray 4s linear infinite,
+        cLetterOffset 8s linear infinite;
+}
+
+@keyframes cLetterArray {
+    0% { stroke-dasharray: 0 40%; }
+    50% { stroke-dasharray: 150% 0; }
+    100% { stroke-dasharray: 0 150%; }
+}
+
+@keyframes cLetterOffset {
+    0% { stroke-dashoffset: -20%; }
+    50% { stroke-dashoffset: 20%; }
+    100% { stroke-dashoffset: -20%; }
+}
