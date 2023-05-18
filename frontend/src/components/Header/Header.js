@@ -18,6 +18,9 @@ const Header = () => {
                 <div className="header-item">
                     <NavLink to="/about" className={setActiveClassName}>what is it</NavLink>
                 </div>
+                <div className="header-item">
+                    <NavLink to="/admin" className={setActiveClassName}>admin</NavLink>
+                </div>
             </div>
         </header>
     )

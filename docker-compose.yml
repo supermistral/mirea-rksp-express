@@ -1,0 +1,34 @@
+version: "3"
+
+services:
+  database:
+    image: postgres:14-alpine
+    container_name: mirea-rksp_database
+    env_file:
+      - ./.db.env
+    ports:
+      - 5432:5432
+
+  backend:
+    build: ./backend
+    container_name: mirea-rksp_backend
+    command: npm start
+    volumes:
+      - ./backend/:/usr/src/app/
+    env_file:
+      - ./.app.env
+    ports:
+      - 8000:8000
+    depends_on:
+      - database
+
+  frontend:
+    build: ./frontend
+    container_name: mirea-rksp_frontend
+    command: npm start
+    volumes:
+      - ./frontend/:/usr/src/app/
+    ports:
+      - 3000:3000
+    depends_on:
+      - database

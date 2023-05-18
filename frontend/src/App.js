@@ -5,6 +5,8 @@ import Header from './components/Header/Header';
 import About from './components/About/About';
 import BookList from './components/Book/BookList';
 import Book from './components/Book/Book/Book';
+import AdminPanel from './components/AdminPanel/AdminPanel';
+import { default as AdminBookList } from './components/AdminPanel/Books/BookList/BookList';
 
 
 function App() {
@@ -19,6 +21,15 @@ function App() {
                     </Route>
                     <Route path='about'>
                         <Route index={true} element={<About />} />
+                    </Route>
+                    <Route path='admin'>
+                        <Route index={true} element={<AdminPanel />} />
+                        <Route path='books'>
+                            <Route index={true} element={<AdminBookList />} />
+                        </Route>
+                        <Route path='users'>
+                            <Route index={true} element={null} />
+                        </Route>
                     </Route>
                     <Route path='*' element={<Home />} />
                 </Routes>

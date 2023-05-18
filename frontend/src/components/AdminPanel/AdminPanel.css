@@ -1,0 +1,9 @@
+.admin-panel {
+    margin: 1em 0;
+    display: flex;
+    justify-content: center;
+}
+
+.admin-panel > * {
+    margin: 0 0.5em;
+}
