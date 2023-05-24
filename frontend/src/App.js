@@ -7,9 +7,14 @@ import BookList from './components/Book/BookList';
 import Book from './components/Book/Book/Book';
 import AdminPanel from './components/AdminPanel/AdminPanel';
 import { default as AdminBookList } from './components/AdminPanel/Books/BookList/BookList';
+import { useSelector } from 'react-redux';
+import { selectAgree } from './redux/slices/cookieAgreement';
+import CookieAgreement from './components/Alerts/CookieAgreement/CookieAgreement';
 
 
 function App() {
+    const agree = useSelector(selectAgree);
+
     return (
         <BrowserRouter>
             <Header />
@@ -34,6 +39,7 @@ function App() {
                     <Route path='*' element={<Home />} />
                 </Routes>
             </div>
+            {!agree && <CookieAgreement />}
         </BrowserRouter>
     );
 }

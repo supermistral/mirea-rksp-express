@@ -18,12 +18,12 @@ const BookList = () => {
     const handleAddClick = () => setShowEdit(true);
     const handleCloseClick = () => setShowEdit(false);
 
-    const updateBook = (book) => setBooks(prev =>
-        prev.map(item => item.id === book.id ? book : item)
+    const updateBook = (id, book) => setBooks(prev =>
+        prev.map(item => item.id === id ? book : item)
     );
     const addBook = (book) => setBooks(prev => [...prev, book]);
-    const deleteBook = (book) => setBooks(prev =>
-        prev.filter(item => item.id !== book.id)
+    const deleteBook = (id, book) => setBooks(prev =>
+        prev.filter(item => item.id !== id)
     );
 
     return (

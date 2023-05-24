@@ -11,19 +11,20 @@ const BookRow = ({ book, updateCallback, deleteCallback }) => {
     const handleCloseClick = () => setShow(false);
 
     const updateBook = (id, data) => {
+        console.log(id, data);
         bookService.update(id, data)
             .then(res => {
                 handleCloseClick();
-                updateCallback(data);
+                updateCallback(id, res);
             })
             .catch(err => alert(err));
     }
 
-    const deleteBook = (id) => {
-        bookService.delete(id)
+    const deleteBook = () => {
+        bookService.delete(book.id)
             .then(res => {
                 handleCloseClick();
-                deleteCallback(book);
+                deleteCallback(book.id, book);
             })
             .catch(err => alert(err));
     }
