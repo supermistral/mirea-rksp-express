@@ -5,7 +5,7 @@ export const cookieAgreementSlice = createSlice({
     name: 'cookieAgreement',
     initialState: {
         checkbox: false,
-        agree: false,
+        agree: true,    // debug
     },
     reducers: {
         checkboxClicked: (state, action) => {

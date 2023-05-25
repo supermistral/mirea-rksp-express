@@ -10,6 +10,8 @@ import { default as AdminBookList } from './components/AdminPanel/Books/BookList
 import { useSelector } from 'react-redux';
 import { selectAgree } from './redux/slices/cookieAgreement';
 import CookieAgreement from './components/Alerts/CookieAgreement/CookieAgreement';
+import Login from './components/Auth/Login/Login';
+import Signup from './components/Auth/Signup/Signup';
 
 
 function App() {
@@ -35,6 +37,10 @@ function App() {
                         <Route path='users'>
                             <Route index={true} element={null} />
                         </Route>
+                    </Route>
+                    <Route path='auth'>
+                        <Route path='login' element={<Login />} />
+                        <Route path='signup' element={<Signup />} />
                     </Route>
                     <Route path='*' element={<Home />} />
                 </Routes>

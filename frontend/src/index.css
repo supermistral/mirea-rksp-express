@@ -13,9 +13,12 @@ html {
   font-size: 18px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 500;
-  color: rgb(172, 172, 172);
   line-height: 1.25;
-  background-color: #000;
+}
+
+body {
+  color: rgb(172, 172, 172);
+  background-color: #222;
 }
 
 code {

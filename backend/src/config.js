@@ -15,4 +15,6 @@ export const dbUri = `postgres://${dbConfig.user}:${dbConfig.password}` +
 
 export const appConfig = {
     port: 8000,
+    secretKey: process.env.SECRET_KEY,
+    jwtExpiresIn: process.env.JWT_EXPIRES_IN || "20m",
 }
